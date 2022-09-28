@@ -1,2 +1,2 @@
 # odin-recipes
-Assignment for The Odin Project!
+This little website in an assignment for The Odin Project: https://www.theodinproject.com/lessons/foundations-recipes
