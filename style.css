@@ -1,0 +1,72 @@
+/* homepage */
+
+body {
+    background-color: #1E2639;
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h3,
+.recipe-list {
+    font-weight: bold;
+}
+
+.red {
+    background-color: #de1d24;
+    color: white;
+    text-align: center; /* IDEM per titoli pagine */
+    padding: 20px;
+    width: fit-content;  /* IDEM per titoli pagine */
+    margin: auto;  /* IDEM per titoli pagine */
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h3 {
+    font-size: 40px;
+    font-variant: small-caps;
+}
+
+.recipe-list {
+    font-size: 25px;
+    font-style: italic;
+    margin-left: 100px;
+}
+
+.recipe-list a:link {
+    color: #4D8AB5;
+}
+
+.recipe-list a:active {
+    color: #de1d24;
+}
+
+.recipe-list a:visited {
+    color: #B9BEBA;
+}
+
+.recipe-list img {
+    height: 200px;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* pages */
+
+body.recipe {
+    background-color: #4D8AB5;
+}
+
+.recipe h1 {
+    color: #1E2639;
+    text-align: center;
+    font-style: italic;
+}
+
+img {
+    max-height: 500px;
+}
