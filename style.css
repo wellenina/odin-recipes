@@ -1,72 +1,90 @@
-/* homepage */
-
 body {
-    background-color: #1E2639;
-    font-family: Arial, sans-serif;
+color: black;
+background-color: #FCF8E8;
+font-family: "Dejavu Sans", Arial, Verdana, sans-serif;
 }
 
-h1,
-h3,
-.recipe-list {
-    font-weight: bold;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-.red {
-    background-color: #de1d24;
-    color: white;
-    text-align: center; /* IDEM per titoli pagine */
-    padding: 20px;
-    width: fit-content;  /* IDEM per titoli pagine */
-    margin: auto;  /* IDEM per titoli pagine */
+h1, .nav-bar {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.nav-bar {
+    max-height: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.odin {
+    height: 4em;
+}
+
+header {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4em;
+    padding: 2em;
+    background-color: #DF7861;
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 7em;
+    margin: 0;
+    line-height: 85%;
+    letter-spacing: -0.04em;
 }
 
-h3 {
-    font-size: 40px;
-    font-variant: small-caps;
+header p {
+    font-size: 2em;
 }
 
-.recipe-list {
-    font-size: 25px;
-    font-style: italic;
-    margin-left: 100px;
+.main {
+    max-width: 700px;
+    margin: 4em auto;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
 
-.recipe-list a:link {
-    color: #4D8AB5;
+.one {
+    background-color: #94B49F;
+}
+.two {
+    background-color: #DF7861;
+    flex-direction: row-reverse;
+}
+.three {
+    background-color: #76549A;
 }
 
-.recipe-list a:active {
-    color: #de1d24;
+.recipe img {
+    max-height: 250px;
 }
 
-.recipe-list a:visited {
-    color: #B9BEBA;
+.recipe a {
+    padding: 1em;
 }
 
-.recipe-list img {
-    height: 200px;
-    width: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.recipe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
-/* pages */
-
-body.recipe {
-    background-color: #4D8AB5;
-}
-
-.recipe h1 {
-    color: #1E2639;
+footer {
     text-align: center;
-    font-style: italic;
-}
-
-img {
-    max-height: 500px;
 }
