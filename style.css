@@ -1,145 +1,161 @@
 body {
-color: black;
-background-color: #FCF8E8;
-font-family: "Dejavu Sans", Arial, Verdana, sans-serif;
+  color: black;
+  background-color: #fcf8e8;
+  font-family: "Dejavu Sans", Arial, Verdana, sans-serif;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
-h1, .nav-bar {
-    text-transform: uppercase;
-    font-weight: 900;
+h1,
+.nav-bar {
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
 .nav-bar {
-    max-height: 6em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+  max-height: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .odin {
-    height: 4em;
+  height: 4em;
 }
 
-header {
-    font-size: 2em;
-    max-width: 1100px;
-    padding: 1em;
-    background-color: #DF7861;
-    margin: 0 auto 2em;
+header,
+.description {
+  max-width: 1100px;
+  padding: 2em;
+  background-color: #df7861;
+  margin: 0 auto 2em;
+}
+
+.page header {
+  background-color: #94b49f;
+  flex-direction: row-reverse;
+}
+
+.page img {
+  max-width: 500px;
 }
 
 h1 {
-    font-size: 3.5em;
-    margin: 0;
-    line-height: 85%;
-    letter-spacing: -0.04em;
+  font-size: clamp(48px, 10vw, 7rem);
+  margin: 0;
+  line-height: 85%;
+  letter-spacing: -0.08em;
+}
+
+header p {
+  font-size: 2rem;
 }
 
 .recipe {
-    max-width: 700px;
-    margin: 2em auto;
-    text-align: center; /* on smaller screens only */
-    display: flex;
-    flex-direction: column; /* on smaller screens only */
-    align-items: center;
-    padding: 1em; /* on smaller screens only */
+  max-width: 700px;
+  margin: 2em auto;
+  text-align: center; /* on smaller screens only */
+  display: flex;
+  flex-direction: column; /* on smaller screens only */
+  align-items: center;
+  padding: 1em; /* on smaller screens only */
 }
 
 .one {
-    background-color: #94B49F;
+  background-color: #94b49f;
 }
 .two {
-    background-color: #DF7861;
+  background-color: #df7861;
 }
 .three {
-    background-color: #76549A;
+  background-color: #76549a;
 }
 
 .recipe img {
-    max-height: 250px;
+  max-height: 250px;
 }
 
 .recipe a {
-    color: #FCF8E8;
-    font-size: 1.5em;
-    font-style: italic;
-    padding: 0 .25rem;
-    margin: 0 -.25rem;
-    transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+  color: #fcf8e8;
+  font-size: 1.5rem;
+  font-style: italic;
+  padding: 0 0.25rem;
+  margin: 0 -0.25rem;
+  transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
 }
 
 .recipe a:hover {
-    color: black;
-    box-shadow: inset 400px 0 0 0 #FCF8E8;
-  }
+  color: black;
+  box-shadow: inset 400px 0 0 0 #fcf8e8;
+}
 
 .recipe-name {
-    padding: 1em;
-    max-width: 300px;
+  padding: 1em;
+  max-width: 300px;
 }
 
 footer {
-    text-align: center;
+  text-align: center;
 }
 
 /* for larger screens */
 @media (min-width: 600px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2em;
-    }
-    .recipe {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: start;
-        padding: 0;
-    }
-    .two {
-        flex-direction: row-reverse;
-        text-align: end;
-    }
+  header,
+  .ingredients {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+  .recipe {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: start;
+    padding: 0;
+  }
+  .two {
+    flex-direction: row-reverse;
+    text-align: end;
+  }
 }
 
 /* flip animation effect */
 .flip {
-    background-color: transparent;
-    width: 250px;
-    height: 250px;
-    perspective: 1000px;
-  }
-  
-  .flip-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
-  
-  .flip:hover .flip-inner {
-    transform: rotateY(180deg);
-  }
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  perspective: 1000px;
+}
 
-  .front, .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
-  .back {
-    transform: rotateY(180deg);
-  }
+.flip:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
