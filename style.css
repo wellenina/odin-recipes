@@ -30,34 +30,28 @@ h1, .nav-bar {
 }
 
 header {
+    font-size: 2em;
     max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4em;
-    padding: 2em;
+    padding: 1em;
     background-color: #DF7861;
+    margin: 0 auto 2em;
 }
 
 h1 {
-    font-size: 7em;
+    font-size: 3.5em;
     margin: 0;
     line-height: 85%;
     letter-spacing: -0.04em;
 }
 
-header p {
-    font-size: 2em;
-}
-
-.main {
+.recipe {
     max-width: 700px;
-    margin: 4em auto;
-    font-size: 1.5em;
+    margin: 2em auto;
+    text-align: center; /* on smaller screens only */
     display: flex;
-    flex-direction: column;
-    gap: 2em;
+    flex-direction: column; /* on smaller screens only */
+    align-items: center;
+    padding: 1em; /* on smaller screens only */
 }
 
 .one {
@@ -65,7 +59,6 @@ header p {
 }
 .two {
     background-color: #DF7861;
-    flex-direction: row-reverse;
 }
 .three {
     background-color: #76549A;
@@ -76,20 +69,38 @@ header p {
 }
 
 .recipe a {
-    padding: 1em;
+    font-size: 1.5em;
     font-style: italic;
 }
 
-.recipe {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.recipe-name {
+    padding: 1em;
+    max-width: 300px;
 }
 
 footer {
     text-align: center;
 }
 
+/* for larger screens */
+@media (min-width: 600px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+    }
+    .recipe {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: start;
+        padding: 0;
+    }
+    .two {
+        flex-direction: row-reverse;
+        text-align: end;
+    }
+}
 
 /* flip animation effect */
 .flip {
