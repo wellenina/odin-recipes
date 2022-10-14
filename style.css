@@ -69,9 +69,18 @@ h1 {
 }
 
 .recipe a {
+    color: #FCF8E8;
     font-size: 1.5em;
     font-style: italic;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
 }
+
+.recipe a:hover {
+    color: black;
+    box-shadow: inset 400px 0 0 0 #FCF8E8;
+  }
 
 .recipe-name {
     padding: 1em;
