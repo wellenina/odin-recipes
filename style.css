@@ -1,12 +1,24 @@
+html,
 body {
   color: black;
   background-color: #fcf8e8;
   font-family: "Dejavu Sans", Arial, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-  text-decoration: none;
   color: black;
+}
+
+a:hover {
+  color: #fcf8e8;
+  /* text-shadow: 2px 2px 0px hotpink; */
+}
+
+.nav-bar a,
+.recipe-name a {
+  text-decoration: none;
 }
 
 h1,
@@ -21,9 +33,9 @@ h1,
   align-items: center;
   justify-content: space-between;
   padding: 1em;
-  position: -webkit-sticky;
+  /* position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 0; */
 }
 
 .odin {
@@ -31,20 +43,19 @@ h1,
 }
 
 header,
-.description {
+.wrapper {
   max-width: 1100px;
-  padding: 2em;
-  background-color: #df7861;
-  margin: 0 auto 2em;
+  padding: 1em;
+  margin: 0 auto;
 }
 
 .page header {
-  background-color: #94b49f;
   flex-direction: row-reverse;
 }
 
 .page img {
   max-width: 500px;
+  margin: 2rem 0;
 }
 
 h1 {
@@ -60,7 +71,7 @@ header p {
 
 .recipe {
   max-width: 700px;
-  margin: 2em auto;
+  margin: 2rem auto;
   text-align: center; /* on smaller screens only */
   display: flex;
   flex-direction: column; /* on smaller screens only */
@@ -68,13 +79,13 @@ header p {
   padding: 1em; /* on smaller screens only */
 }
 
-.one {
+.green {
   background-color: #94b49f;
 }
-.two {
+.red {
   background-color: #df7861;
 }
-.three {
+.purple {
   background-color: #76549a;
 }
 
@@ -89,6 +100,8 @@ header p {
   padding: 0 0.25rem;
   margin: 0 -0.25rem;
   transition: color 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .recipe a:hover {
@@ -101,14 +114,28 @@ header p {
   max-width: 300px;
 }
 
+h3 {
+  text-align: center;
+  margin: 0;
+  padding-top: 1.5rem;
+}
+
+.purple p {
+  text-align: center;
+  margin: 0;
+  padding: 1.5rem;
+}
+
 footer {
   text-align: center;
+  background-color: rgba(210, 183, 80, 0.4);
+  padding: 0.2rem 0;
 }
 
 /* for larger screens */
 @media (min-width: 600px) {
   header,
-  .ingredients {
+  .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,7 +147,7 @@ footer {
     text-align: start;
     padding: 0;
   }
-  .two {
+  .recipe.red {
     flex-direction: row-reverse;
     text-align: end;
   }
