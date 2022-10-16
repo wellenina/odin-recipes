@@ -53,9 +53,14 @@ header,
   flex-direction: row-reverse;
 }
 
-.page img {
+.img-wrapper {
   max-width: 500px;
+  flex-basis: 100%;
   margin: 2rem 0;
+}
+
+.page img {
+width: 100%;
 }
 
 h1 {
@@ -120,7 +125,7 @@ h3 {
   padding-top: 1.5rem;
 }
 
-.purple p {
+.page .purple p {
   text-align: center;
   margin: 0;
   padding: 1.5rem;
