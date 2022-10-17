@@ -5,28 +5,47 @@
     <meta charset="UTF-8" />
     <title>The FitzSimmons Sandwich</title>
     <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body class="page">
     <div class="green">
-      <div class="nav-bar">
+      <div class="top-navbar">
         <a href="https://www.theodinproject.com/" target="_blank"
           ><img
-            class="odin"
+            id="odin"
             src="../images/theOdinProject.png"
             alt="The Odin Project"
         /></a>
-        <a href="#">Menu</a>
+
+        <div class="navbar">
+          <a href="../index.html">Home</a>
+
+          <div class="subnav">
+            <button class="subnavbtn">
+              Recipes <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="subnav-content">
+              <a href="pizzapoppa.html">Pizza Poppa&apos;s Pizza Balls</a>
+              <a href="paprikash.html">The Vision&apos;s Paprikash</a>
+            </div>
+          </div>
+
+          <a href="#footer">About</a>
+        </div>
       </div>
 
       <header>
         <h1>The FitzSimmons Sandwich</h1>
         <div class="img-wrapper">
-        <img
-          src="../images/fitzsimmons.gif"
-          alt="The scene from Agents of S.H.I.E.L.D. when Jemma gives the famous sandwich to Fitz"
-        />
-      </div>
+          <img
+            src="../images/fitzsimmons.gif"
+            alt="The scene from Agents of S.H.I.E.L.D. when Jemma gives the famous sandwich to Fitz"
+          />
+        </div>
       </header>
     </div>
 
@@ -55,11 +74,11 @@
         </p>
       </div>
       <div class="img-wrapper">
-      <img
-        src="../images/sandwich.jpg"
-        alt="Prosciutto and buffalo mozzarella sandwich, with just a hint of homemade pesto aioli"
-      />
-    </div>
+        <img
+          src="../images/sandwich.jpg"
+          alt="Prosciutto and buffalo mozzarella sandwich, with just a hint of homemade pesto aioli"
+        />
+      </div>
     </div>
 
     <div class="red">
@@ -132,7 +151,7 @@
       </p>
     </div>
 
-    <footer>
+    <footer id="footer">
       <p>
         &#x1F496; <br />
         A project by

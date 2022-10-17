@@ -11,23 +11,25 @@ a {
   color: black;
 }
 
-a:hover {
+p a:hover {
   color: #fcf8e8;
-  /* text-shadow: 2px 2px 0px hotpink; */
+  text-shadow: 2px 2px 0px hotpink;
 }
 
-.nav-bar a,
+.top-navbar a,
 .recipe-name a {
   text-decoration: none;
 }
 
 h1,
-.nav-bar {
+.top-navbar,
+.subnavbtn {
   text-transform: uppercase;
   font-weight: 900;
+  margin: 0;
 }
 
-.nav-bar {
+.top-navbar {
   max-height: 6em;
   display: flex;
   align-items: center;
@@ -38,9 +40,63 @@ h1,
   top: 0; */
 }
 
-.odin {
+#odin {
   height: 4em;
+  width: auto;
 }
+
+/* navigation + subnavigation menu */
+.navbar,
+.subnav {
+  overflow: hidden;
+}
+
+.navbar a,
+.subnav {
+  float: left;
+}
+
+.navbar a,
+.subnavbtn {
+  font-size: 16px;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.subnavbtn {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+}
+
+.navbar a:hover,
+.subnav:hover .subnavbtn,
+.subnav-content {
+  background-color: #fcf8e8;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: right;
+}
+
+.subnav-content a:hover {
+  background-color: #76549a;
+  color: #fcf8e8;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+/* end of navigation + subnavigation menu */
 
 header,
 .wrapper {
@@ -60,12 +116,11 @@ header,
 }
 
 .page img {
-width: 100%;
+  width: 100%;
 }
 
 h1 {
   font-size: clamp(48px, 10vw, 7rem);
-  margin: 0;
   line-height: 85%;
   letter-spacing: -0.08em;
 }
