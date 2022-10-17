@@ -30,18 +30,19 @@ h1,
 }
 
 .top-navbar {
-  max-height: 6em;
+  max-height: 6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1em;
-  /* position: -webkit-sticky;
+  padding: 0.4rem;
+  position: -webkit-sticky;
   position: sticky;
-  top: 0; */
+  top: 0;
+  z-index: 1;
 }
 
 #odin {
-  height: 4em;
+  height: 4rem;
   width: auto;
 }
 
@@ -139,10 +140,10 @@ header p {
   padding: 1em; /* on smaller screens only */
 }
 
-.green {
+.green, .page .top-navbar {
   background-color: #94b49f;
 }
-.red {
+.red, .top-navbar {
   background-color: #df7861;
 }
 .purple {
